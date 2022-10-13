@@ -17,7 +17,7 @@ class PersonasView(View):
   # GET Method
   def get(self, request, id=0):
     if (id > 0):
-      personas = list(Persona.objects.filter(id=id).values())
+      personas = list(Persona.objects.filter(id=id).values().order_by('id'))
       
       if len(personas) > 0: 
         persona = personas[0]
