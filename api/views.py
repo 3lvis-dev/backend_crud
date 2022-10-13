@@ -28,7 +28,7 @@ class PersonasView(View):
       return JsonResponse(data)
 
     else:
-      personas = list(Persona.objects.values())
+      personas = list(Persona.objects.values().order_by('id'))
       if len(personas) > 0:
         data = { 'personas' : personas }
       else:
