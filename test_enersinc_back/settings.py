@@ -107,10 +107,7 @@ WSGI_APPLICATION = 'test_enersinc_back.wsgi.application'
 
 # BBDD Config Prod
 DATABASES = {
-    'default': dj_database_url.config(        
-        default='postgresql://postgres:postgres@localhost/postgres',        
-        conn_max_age=600    
-    )
+    'default': dj_database_url.config(conn_max_age=600)
 }
 
 
